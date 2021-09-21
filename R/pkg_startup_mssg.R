@@ -1,7 +1,15 @@
-.onAttach <- function(libname, pkgname) {
-  packageStartupMessage(
-    paste0(
-      "Version: ", utils::packageVersion("gibber")
-    )
+package_version <- function(){
+  pkgs_ver <- as.character(utils::packageVersion("gibber"))
+  cat(
+    crayon::green(cli::symbol$tick),
+    "Version:",
+    pkgs_ver
   )
 }
+
+.onAttach <- function(libname, pkgname) {
+  packageStartupMessage(
+    package_version()
+  )
+}
+
