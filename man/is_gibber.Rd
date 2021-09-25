@@ -13,5 +13,9 @@ is_gibber(words)
 
 }
 \description{
-Predict presence of gibberish words in a sentence
+A recurrent neural network is used to calculate the probability of
+}
+\examples{
+words <- c("asdf", "elephant")
+is_gibber(words)
 }
