@@ -2,7 +2,7 @@
 % Please edit documentation in R/is_gibber.R
 \name{is_gibber}
 \alias{is_gibber}
-\title{Predict presence of gibberish words in a sentence}
+\title{Predict presence of gibberish words}
 \usage{
 is_gibber(words)
 }
@@ -13,7 +13,7 @@ is_gibber(words)
 
 }
 \description{
-A recurrent neural network is used to calculate the probability of
+Predict presence of gibberish words
 }
 \examples{
 words <- c("asdf", "elephant")
