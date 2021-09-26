@@ -2,20 +2,24 @@
 % Please edit documentation in R/is_gibber.R
 \name{is_gibber}
 \alias{is_gibber}
-\title{Predict presence of gibberish words}
+\title{Detect presence of gibberish text in a sentence}
 \usage{
-is_gibber(words)
+is_gibber(sentence, output = "prob", trim_sentence = 2)
 }
 \arguments{
-\item{words}{character vector}
+\item{sentence}{character vector. A sentence or words.}
+
+\item{output}{either "prob" for probabilities, "class" for classifications or "bool" for TRUE/FALSE ("prob" by default).}
+
+\item{trim_sentence}{integer. Specify how many characters a word in a sentence must have to be excluded from the prediction model (2 by default).}
 }
 \value{
-
+numeric vector
 }
 \description{
-Predict presence of gibberish words
+A recurrent neural network is used to calculate the...
 }
 \examples{
-words <- c("asdf", "elephant")
-is_gibber(words)
+sentence <- c("asdf", "This is great", "computer")
+is_gibber(sentence)
 }

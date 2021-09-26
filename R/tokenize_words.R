@@ -15,9 +15,6 @@
 #' words <- c("telephone", "laptop")
 #' tokenize_words(words)
 tokenize_words <- function(words){
-  # load tokenizer
-  gibber_tokenizer <- system.file("extdata", "gibber_tokenizer", package = "gibber", mustWork = TRUE)
-  tokenizer <- keras::load_text_tokenizer(gibber_tokenizer)
   # function maps words to matrices
   sequences <- keras::texts_to_sequences(tokenizer, words)
   # words cannot surpass length of 31 characters
