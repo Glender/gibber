@@ -17,7 +17,13 @@ is_gibber(sentence, output = "prob", trim_sentence = 2)
 numeric vector
 }
 \description{
-A recurrent neural network is used to calculate the...
+Assess the probability that a sentence contains gibberish words. For each word in a sentence, the model
+inspects the sequence of vowels and consonents to estimate whether a sentence consists of natural words. Therefore,
+words like 'asdfg' and 'dfrgfh' are considered unnatural and are classified as not being part of the English spoken language.
+}
+\details{
+A recurrent neural network was trained for this purpose, using a dataset that contains 700.000 words (50\% gibberish words/50\% natural words).
+Special care was taken to avoid overfitting and an accuracy of 97\% was achieved on a validation dataset, thereby guaranteeing generalizable results.
 }
 \examples{
 sentence <- c("asdf", "This is great", "computer")

@@ -1,5 +1,5 @@
 Package: gibber
-Title: A package for detecting gibberish answers
+Title: A package for detecting gibberish text
 Version: 1.0.1
 Authors@R: 
     person(given = "Glenn",
