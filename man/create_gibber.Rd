@@ -24,3 +24,12 @@ create_gibber(n=5)
 # generate three randoms word:
 create_gibber(c(5, 7, 9))
 }
+\references{
+\url{https://github.com/Glender/gibber}
+}
+\seealso{
+\code{\link[gibber]{is_gibber}}
+}
+\author{
+Glenn Hiemstra
+}

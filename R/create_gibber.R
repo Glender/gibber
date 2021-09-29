@@ -3,6 +3,10 @@
 #' Compute a word of length n consisting of randomly chosen
 #' characters from the alphabet.
 #'
+#' @seealso \code{\link[gibber]{is_gibber}}
+#' @references \url{https://github.com/Glender/gibber}
+#' @author Glenn Hiemstra
+#'
 #' @param n a numeric vector giving the number of characters in each word.
 #' @param prob a vector of probability weights for obtaining the elements of the vector being sampled.
 #'

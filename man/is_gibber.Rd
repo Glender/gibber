@@ -9,23 +9,35 @@ is_gibber(sentence, output = "prob", trim_sentence = 2)
 \arguments{
 \item{sentence}{character vector. A sentence or words.}
 
-\item{output}{either "prob" for probabilities, "class" for classifications or "bool" for TRUE/FALSE ("prob" by default).}
+\item{output}{either "prob" for probabilities, "class" for binary classifications or "bool" for TRUE/FALSE ("prob" by default).}
 
 \item{trim_sentence}{integer. Specify how many characters a word in a sentence must have to be excluded from the prediction model (2 by default).}
 }
 \value{
-numeric vector
+numeric vector, integer of logical
 }
 \description{
+\code{is_gibber} returns the probability that text contains gibberish words.
+}
+\details{
 Assess the probability that a sentence contains gibberish words. For each word in a sentence, the model
 inspects the sequence of vowels and consonents to estimate whether a sentence consists of natural words. Therefore,
 words like 'asdfg' and 'dfrgfh' are considered unnatural and are classified as not being part of the English spoken language.
-}
-\details{
-A recurrent neural network was trained for this purpose, using a dataset that contains 700.000 words (50\% gibberish words/50\% natural words).
+
+A recurrent neural network was trained to recognize gibber in text. For this purpose, dataset was used that contains 700.000 English words (50\% gibberish words/50\% natural words).
 Special care was taken to avoid overfitting and an accuracy of 97\% was achieved on a validation dataset, thereby guaranteeing generalizable results.
 }
 \examples{
-sentence <- c("asdf", "This is great", "computer")
-is_gibber(sentence)
+# test text
+sentences <- c("asdf", "This is great")
+is_gibber(sentences)
+}
+\references{
+\url{https://github.com/Glender/gibber}
+}
+\seealso{
+\code{\link[gibber]{create_gibber}}
+}
+\author{
+Glenn Hiemstra
 }
