@@ -1,9 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# gibber
-
-    #> ✓ Setting active project to '/home/glenn/Documents/Github/gibber'
+# gibber <img src="man/figures/logo.png" align="right"  height="200" />
 
 [![](https://img.shields.io/badge/devel%20version-1.0.1-purple.svg)](https://github.com/Glender/gibber)
 [![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
@@ -72,11 +70,11 @@ vowels and consonents to estimate whether a sentence consists of natural
 words. Therefore, words like ‘asdfg’ and ‘dfrgfh’ are considered
 unnatural and are classified as gibber.
 
-A recurrent neural network was trained to recognize gibberish words in
-textual data. Furthermore, a dataset was used that contains 700.000
-English words (50% gibberish words/50% natural words). Special care was
-taken to avoid overfitting and an accuracy of 97% was achieved on a
-validation dataset, thereby guaranteeing generalizable results.
+For this goal, a recurrent neural network was trained on a dataset that
+contains 700.000 English words (50% gibberish words/50% natural words).
+Special care was taken to avoid overfitting and an accuracy of 97% was
+achieved on a validation dataset, thereby guaranteeing generalizable
+results.
 
 ## :speech\_balloon: Help
 
