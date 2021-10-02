@@ -1,7 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# gibber <img src="man/figures/logo.png" align="right"  height="200" />
+# gibber <img src="man/figures/logo.jpeg" align="right"  height="200" />
+
+    #> ✓ Setting active project to '/home/glenn/Documents/Github/gibber'
 
 [![](https://img.shields.io/badge/devel%20version-1.0.1-purple.svg)](https://github.com/Glender/gibber)
 [![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
