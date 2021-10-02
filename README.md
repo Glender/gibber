@@ -1,11 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# gibber <img src="man/figures/logo.jpeg" align="right"  height="134" />
+# gibber <img src="man/figures/logo.jpeg" align="right"  height="139" />
 
 [![](https://img.shields.io/badge/devel%20version-1.0.1-purple.svg)](https://github.com/Glender/gibber)
-[![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
-[![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
 [![R build
 status](https://github.com/rossellhayes/ipa/workflows/R-CMD-check/badge.svg)](https://github.com/rossellhayes/ipa/actions)
 [![](https://codecov.io/gh/rcannood/princurve/branch/master/graph/badge.svg)](https://codecov.io/gh/rcannood/princurve)
@@ -40,7 +38,6 @@ devtools::install_github("Glender/gibber")
 ``` r
 library(gibber)
 #> ✓ Version: 1.0.1
-#> 
 
 # create vector with character data
 text <- c(
@@ -54,8 +51,7 @@ text <- c(
 
 # assess is text is legit, on default output gives a probability
 is_gibber(text)
-#> [1] 0.1476262401 0.9998687067 0.0005267262 0.9998653365 0.0767789781
-#> [6] 0.9998563863
+#> [1] 0.1476262401 0.9998687067 0.0005267262 0.9998653365 0.0767789781 0.9998563863
 
 # change output to logical
 is_gibber(text, output = "bool")

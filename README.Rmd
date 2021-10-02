@@ -13,13 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-# gibber <img src="man/figures/logo.jpeg" align="right"  height="134" />
+# gibber <img src="man/figures/logo.jpeg" align="right"  height="139" />
 
 ```{r, echo = FALSE, results='asis'}
 cat(
 	badger::badge_devel("Glender/gibber", "purple"),
-	badger::badge_codefactor("rossellhayes/ipa"),
-	badger::badge_lifecycle("maturing", "blue"),
 	badger::badge_github_actions("rossellhayes/ipa"),
 	badger::badge_codecov("rcannood/princurve"),
 	badger::badge_code_size("Glender/gibber")
