@@ -9,6 +9,8 @@ status](https://github.com/rossellhayes/ipa/workflows/R-CMD-check/badge.svg)](ht
 [![](https://codecov.io/gh/rcannood/princurve/branch/master/graph/badge.svg)](https://codecov.io/gh/rcannood/princurve)
 [![](https://img.shields.io/github/languages/code-size/Glender/gibber.svg)](https://github.com/Glender/gibber)
 
+## Overview
+
 When collecting qualitative survey data, not every respondent is
 motivated to provide valid answers to survey questions. Respondents may
 get bored answering repetitive questions or are driven to finish
