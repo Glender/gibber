@@ -1,0 +1,85 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# gibber
+
+```{r, echo = FALSE, results='asis'}
+cat(
+	badger::badge_devel("Glender/gibber", "purple"),
+	badger::badge_codefactor("rossellhayes/ipa"),
+	badger::badge_lifecycle("maturing", "blue"),
+	badger::badge_github_actions("rossellhayes/ipa"),
+	badger::badge_codecov("rcannood/princurve"),
+	badger::badge_code_size("Glender/gibber")
+)
+```
+
+When collecting qualitative survey data, not every respondent is motivated to provide valid answers to survey questions.
+Respondents may get bored answering repetitive questions or are driven to finish questionnaires as soon as possible because of survey rewards. The gibber packages tries to identify those respondents by examining their textual answers on open questions. A deep leaerning algorithm is used for this purpose and yields the probability that text is real. For example, answers like 'asdf' and 'dghfr' are considered gibberish, while answers like 'computer' and 'trunk' are classified as legit text.     
+
+## :writing_hand: Author
+
+Name: Glenn Hiemstra
+
+Email: Glenn.Hiemstra@gmail.com
+
+## :arrow_double_down: Installation
+
+```r
+# Install the cutting edge development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("Glender/gibber")
+```
+
+## :book: Usage
+
+```{r}
+library(gibber)
+
+# create vector with character data
+text <- c(
+ "Personally I'm always ready to learn, although I do not always like being taught.",
+ "asdfg",
+ "Computer",
+ "dfhdfghd",
+ "I love to walk.",
+ "dhdshergeregfrvgergsgr"
+)
+
+# assess is text is legit, on default output gives a probability
+is_gibber(text)
+
+# change output to logical
+is_gibber(text, output = "bool")
+
+```
+
+## :floppy_disk: Data
+
+`is_gibber` assesses the probability that a sentence contains gibberish words. For each word in a sentence, the model inspects the sequence of vowels and consonents to estimate whether a sentence consists of natural words. Therefore, words like 'asdfg' and 'dfrgfh' are considered unnatural and are classified as gibber.
+
+A recurrent neural network was trained to recognize gibberish words in textual data. Furthermore, a dataset was used that contains 700.000 English words (50% gibberish words/50% natural words). Special care was taken to avoid overfitting and an accuracy of 97% was achieved on a validation dataset, thereby guaranteeing generalizable results.
+
+## :speech_balloon: Help
+
+The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation help page `?gibber` or `help("gibber")`.
+```
+# For example:
+?is_gibber
+help("is_gibber")
+```
+
+
+

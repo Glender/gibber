@@ -13,26 +13,26 @@
 #' @references \url{https://github.com/Glender/gibber}
 #' @author Glenn Hiemstra
 #'
-#' @param sentence character vector. A sentence or words.
+#' @param text character vector. Sentences or words.
 #' @param output either "prob" for probabilities, "class" for binary classifications or "bool" for TRUE/FALSE ("prob" by default).
 #' @param trim_sentence integer. Specify how many characters a word in a sentence must have to be excluded from the prediction model (2 by default).
 #' @return numeric vector, integer of logical
 #' @export
 #' @examples
 #' # test text
-#' sentences <- c("asdf", "This is great")
-#' is_gibber(sentences)
-is_gibber <- function(sentence, output = "prob", trim_sentence=2){
+#' text <- c("asdf", "This is great")
+#' is_gibber(text)
+is_gibber <- function(text, output="prob", trim_sentence=2){
 
-  stopifnot(is.character(sentence))
+  stopifnot(is.character(text))
   stopifnot(output=="prob"|output=="class"|output=="bool")
   stopifnot(trim_sentence%%1==0)
 
   # create list to store the result
   # for each word in a sentence the prob of gibber is calculated
-  probs_word <- vector("list", length(sentence))
-  splitted_sentence <- strsplit(sentence, split=" ")
-  # remove words from a sentence that have fewer than 3 characters
+  probs_word <- vector("list", length(text))
+  splitted_sentence <- strsplit(text, split=" ")
+  # remove words from a sentence that have fewer than x characters
   words_per_sentence <- lapply(splitted_sentence, function(x) x[nchar(x)>trim_sentence])
 
   # loop over words in a sentence and
@@ -60,7 +60,7 @@ is_gibber <- function(sentence, output = "prob", trim_sentence=2){
   # convert to desired output
   if(output == "class"){
     scores <- round(scores)
-  } else if(output=="bool"){
+  } else if(output == "bool"){
     scores <- as.logical(round(scores))
   }
   return(scores)

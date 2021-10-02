@@ -4,10 +4,10 @@
 \alias{is_gibber}
 \title{Detect presence of gibberish text in a sentence}
 \usage{
-is_gibber(sentence, output = "prob", trim_sentence = 2)
+is_gibber(text, output = "prob", trim_sentence = 2)
 }
 \arguments{
-\item{sentence}{character vector. A sentence or words.}
+\item{text}{character vector. Sentences or words.}
 
 \item{output}{either "prob" for probabilities, "class" for binary classifications or "bool" for TRUE/FALSE ("prob" by default).}
 
@@ -29,8 +29,8 @@ Special care was taken to avoid overfitting and an accuracy of 97\% was achieved
 }
 \examples{
 # test text
-sentences <- c("asdf", "This is great")
-is_gibber(sentences)
+text <- c("asdf", "This is great")
+is_gibber(text)
 }
 \references{
 \url{https://github.com/Glender/gibber}

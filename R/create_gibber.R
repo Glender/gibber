@@ -24,4 +24,3 @@ create_gibber <- function(n, prob=NULL){
   })
   return(nonsense_words)
 }
-
