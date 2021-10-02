@@ -16,7 +16,7 @@ motivated to provide valid answers to survey questions. Respondents may
 get bored answering repetitive questions or are driven to finish
 questionnaires as soon as possible because of survey rewards. The gibber
 packages tries to identify those respondents by examining their textual
-answers on open questions. A deep leaerning algorithm is used for this
+answers on open questions. A deep learning algorithm is used for this
 purpose and yields the probability that text is real. For example,
 answers like ‘asdf’ and ‘dghfr’ are considered gibberish, while answers
 like ‘computer’ and ‘trunk’ are classified as legit text.
