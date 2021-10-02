@@ -58,7 +58,8 @@ text <- c(
  "dhdshergeregfrvgergsgr"
 )
 
-# assess is text is legit, on default output gives a probability
+# assess if text is legit, on default output gives a probability
+# the higher the prob, the more likely text is gibberish
 is_gibber(text)
 
 # change output to logical
