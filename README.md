@@ -30,7 +30,13 @@ Email: <Glenn.Hiemstra@gmail.com>
 ## :arrow\_double\_down: Installation
 
 ``` r
-# Install the cutting edge development version from GitHub:
+# this package has a dependency on keras
+# Be warned: it can be quite painfull to install keras on windows and mac
+# install.packages("keras") # package version 2.6.0
+# library(keras)
+# install_keras(tensorflow = "gpu")
+
+# Thereafter, install the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("Glender/gibber")
 ```

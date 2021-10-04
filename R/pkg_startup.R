@@ -10,7 +10,6 @@ tokenizer <- NULL
   # load tokenizer
   tokenizer_path <- system.file("extdata", "gibber_tokenizer", package = "gibber", mustWork = TRUE)
   tokenizer <<- keras::load_text_tokenizer(tokenizer_path)
-
 }
 
 package_version <- function(){
