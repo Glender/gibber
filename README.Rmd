@@ -42,6 +42,9 @@ Email: Glenn.Hiemstra@gmail.com
 # Be warned: it can be quite painfull to install keras on windows and mac
 # install.packages("keras") # package version 2.6.0
 # library(keras)
+
+# then install tensorflow backend for gpu or cpu:
+# install_keras() # for cpu
 # install_keras(tensorflow = "gpu")
 
 # Thereafter, install the development version from GitHub:
